@@ -4,10 +4,10 @@ import java.util.regex.Pattern;
 public class TaskSevenLetterA {
     public static void main(String[] args) {
         Integer count = Integer.valueOf(0);
-        String s = "adkfjkjdjksklccca accccca wlkf;jw jklwflw;; 3424jkcccc wefjkkklwj cc aa";
+        String s = "adkfjkjdjksklccca a accccca wlkf;jw jklwflw;; 3424jkcccc wefjkkklwj cc  aa";
 
 
-        Pattern pattern = Pattern.compile("a\\S*a");
+        Pattern pattern = Pattern.compile("(a\\S*a)|(\\ba\\b)");
         Matcher matcher = pattern.matcher(s);
 
         while (matcher.find()){
