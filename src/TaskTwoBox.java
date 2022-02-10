@@ -1,24 +1,31 @@
 public class TaskTwoBox {
 
-    private final Integer height;
-    private final Integer lenght;
-    private final Integer width;
+    private  Integer height;
+    private  Integer lenght;
+    private  Integer width;
 
-    TaskTwoBox(Integer height, Integer lenght, Integer width){
+
+    public TaskTwoBox(Integer height, Integer lenght, Integer width) {
         this.height = height;
         this.lenght = lenght;
         this.width = width;
-
-    }
-    public void definition(){
-        if(height.equals(lenght) && height.equals(width)){
+        if (height.equals(lenght) && height.equals(width)) {
             System.out.println("Это куб");
-        } else if(height == 0){
-            System.out.println("Это конверт");
-        }else{
+        }  else {
             System.out.println("Это обычная коробка");
         }
     }
+    public TaskTwoBox(Integer lenght, Integer width){
+        this.lenght = lenght;
+        this.width = width;
+        System.out.println("Это конверт");
+    }
+
+
+
+
+
+
 
     public Integer getHeight() {
         return height;

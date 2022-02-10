@@ -1,12 +1,23 @@
-public class TaskFourCars {
-    private String model;
-    private String color;
+public enum TaskFourCarTest {
+    AUDIBLUE("AUDI", "Blue"),
+    AUDIRED("AUDI","Red"),
+    AUDIGREEN("AUDI", "Green"),
+    BMWORANGE("BMW","Orange"),
+    BMWBLACK("BMW", "Black"),
+    BMWVIOLET("BMW", "Violet"),
+    KIAYELLOW("KIA","Yellow"),
+    KIAWHITE("KIA", "White"),
+    KIAGRAY("KIA", "Gray"),
 
-    TaskFourCars(String model, String color){
-        this.color = color;
+    ;
+
+    private  String model;
+    private  String color;
+
+    TaskFourCarTest(String model, String color) {
         this.model = model;
+        this.color = color;
     }
-
 
     public String getModel() {
         return model;
@@ -30,6 +41,5 @@ public class TaskFourCars {
         if(model.equalsIgnoreCase("kia") && (color.equalsIgnoreCase("yellow") || color.equalsIgnoreCase("white") || color.equalsIgnoreCase("gray"))){
             this.color = color;
         }
-
     }
 }
